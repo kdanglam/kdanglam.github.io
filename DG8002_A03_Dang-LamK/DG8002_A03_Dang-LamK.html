@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Taylor Swift Music Store </title>
+      <!-- --------------------FONTS------------------------ -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@700&family=Big+Shoulders+Stencil+Text&family=Goldman&family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+
+</head>
+    <body>
+    <h1 style="font-family: Big Shoulders Inline Text; font-size:250%; color: teal;"> Click the Taylor Swift Album cover to add item to the cart! </h1> 
+    <p style="font-family:Big Shoulders Stencil Text; font-size:150%;" id="a1">Speak Now</p>
+    <p style="font-family: Noto Serif" id="p1">Price: $10</p>
+   <input type="button" value="Speak Now" id="b1" style="  background-image: url(Image/speakNow.jpg); background-size:100%; height:100px; width:100px; font-family: Goldman; font-size: 20;">
+   <p style="font-family:Big Shoulders Stencil Text; font-size:150%;" id="a2">1989</p>
+   <p style="font-family: Noto Serif" id="p2">Price: $15</p>
+   <input type="button" value="1989" id="b2" style="  background-image: url(Image/1989.jpg); background-size:100%; height:100px; width:100px; font-family: Goldman; font-size: 20;">
+   <p style="font-family:Big Shoulders Stencil Text; font-size:150%; " id="a3">Reputation</p>
+   <p style="font-family: Noto Serif" id="p3">Price: $20</p>
+   <input type="button" value="Reputation" id="b3" style="  background-image: url(Image/reputation.jpg); background-size:100%; height:100px; width:100px; font-family: Goldman; font-size: 20;">
+    <p style="font-family:Big Shoulders Stencil Text; font-size:150%; ">Cart Total:</p>
+     <p style="font-family: Noto Serif" id="total">0</p>
+     <p style="font-family:Big Shoulders Stencil Text; font-size:150%; color: green;">Enter Payment Amount:</p>
+     <input type="number" id=input>
+     <input type="button" value="Confirm Purchase" id="pay">
+
+<!-- -------------------------JAVASCRIPT------------------------- -->
+     <script>
+     	//------ALBUM NAMES AND DESCRIPTION------
+     	// --------------HOVER--------------
+       var album1 = document.querySelector("#a1");
+       album1.addEventListener("mouseover", changeText);
+       album1.addEventListener("mouseout", changeBack);
+
+       var album2 = document.querySelector("#a2");
+       album2.addEventListener("mouseover", changeText);
+       album2.addEventListener("mouseout", changeBack);
+
+       var album3 = document.querySelector("#a3");
+       album3.addEventListener("mouseover", changeText);
+       album3.addEventListener("mouseout", changeBack);
+
+       function changeText(){
+       	if(this.id == "a1"){
+       		this.textContent = "Speak Now is the third studio album by American singer-songwriter Taylor Swift. It was released on October 25, 2010, by Big Machine Records.";
+      	}
+      	else if(this.id == "a2"){
+      		this.textContent = "1989 is the fifth studio album by American singer-songwriter Taylor Swift, released on October 27, 2014, through Big Machine Records.";
+      	}
+      	else{
+      		this.textContent = "Reputation (stylized in all lowercase) is the sixth studio album by American singer-songwriter Taylor Swift. It was released on November 10, 2017, by Big Machine Records.";
+      	}
+       }
+
+       function changeBack(){
+       	if(this.id == "a1"){
+       		this.textContent = "Speak Now";
+       	}
+       	else if(this.id == "a2"){
+       		this.textContent = "1989";
+       	}
+       	else{
+       		this.textContent = "Reputation";
+       	}
+       }
+
+       //----------CLICK BUTTON AND ADD TO TOTAL----------
+       //---------------CLICK BUTTON--------------- 
+       var button1 = document.querySelector("#b1");
+       button1.addEventListener("click", totalCost);
+
+       var button2 = document.querySelector("#b2");
+       button2.addEventListener("click", totalCost);
+
+       var button3 = document.querySelector("#b3");
+       button3.addEventListener("click", totalCost);
+
+       var tot = document.querySelector("#total");
+
+       total = 0;
+       function totalCost(){
+       	if(this.id == "b1"){
+       		total = total + 10;
+       		// total = total;
+       		button1.disabled = true;
+       	}
+       	else if(this.id == "b2"){
+       		total = total + 15;
+       		// total = total;
+       		button2.disabled = true;
+       	}
+       	else{
+       		total = total + 20;
+       		// total = total;
+       		button3.disabled = true;
+       	}
+       	tot.textContent = total;
+       }
+
+       //---------------PAYMENT TOTAL == TOTAL---------------
+       //---------------EQUAL AMOUNT--------------- 
+       var userInput = document.querySelector("#input");
+       var payment = document.querySelector("#pay");
+
+       payment.addEventListener("click", checkout);
+
+       function checkout(){
+        var ui = userInput.value;
+       	if(ui == total){
+       		alert("Purchase completed! Thank you for buying Taylor Swift albums! :D");
+       	}
+       	else if(ui < total){
+       		alert("Payment amount inputted is less than the cart total, please input the correct amount!");
+       	}
+          else{
+       		alert("Payment amount inputted is over the cart total, please input the correct amount!");
+       	}
+       }
+
+     </script>
+    </body>
+</html>
+
