@@ -1,0 +1,315 @@
+/*------------------WEBPAGE-------------------------*/
+body {
+	width: 100%;
+    min-width: 1000px;
+    height: auto;
+	background: #F7E9FB;
+/*	margin-right: 1%;
+	margin-left: 1%;*/
+	margin: auto;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+/*------------------HEADER--------------------------*/
+.header {
+	padding: 40px;
+	text-align: center;
+	/*background: #ADADEB;*/
+	color: #290033;
+	max-width: 768px;
+  	max-height: 1024px;
+  	margin: auto;
+  	display: block;
+  	position: relative;
+}
+
+.header:before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.6;
+	background: url('images/Header.gif');
+	background-size: cover;
+	z-index: -1;
+}
+
+.header h1 {
+	font-family: 'David Libre', serif;
+	font-size: 45px;
+	color: black;
+}
+
+#header {
+	background: #ADADEB;
+}
+
+/*-----------------NAVBAR----------------------------*/
+.navbar {
+	overflow: hidden;
+	background-color: #290033;
+	max-width: 768px;
+  	max-height: 1024px;
+  	margin: auto;
+  	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row;
+	width: 100%;
+}
+
+.navbar a {
+	float: left;
+	display: black;
+	color: white;
+	text-align: center;
+	padding: 15px 30px;
+	text-decoration: none;
+	font-family: 'David Libre', serif;
+	font-size: 16px;
+}
+
+.navbar a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+.navbar a.active {
+	background-color: #4CAF50;
+	color: white;
+}
+
+.navbar .icon {
+	display: none;
+}
+
+.last{
+	margin-bottom: 15px;
+}
+
+/*-------------------EVERY PAGE USED-----------------------*/
+h2 {
+	font-family: 'Josefin Sans', sans-serif;
+	background: #F4D7D7;
+	border: 1px solid #D98C9F;
+	width: 15%;
+	margin-left: 10px;
+	margin-top: 30px;
+	text-align: center;
+}
+
+p {
+	font-family: 'Piazzolla', serif;
+}
+
+h3 {
+	text-decoration: underline;
+	font-style: bold;
+}
+
+img {
+	float: right;
+	margin-right: 40px;
+	display: flex;
+	overflow: hidden;
+}
+
+details {
+	margin-top: 15px;
+	margin-left: 30px;
+}
+
+summary {
+	font-family: 'David Libre', serif;
+	font-size: 18px;
+	text-decoration: underline;
+}
+
+.years {
+	font-family: 'Bree', serif;
+	font-weight: bold;
+	margin-left: 20px;
+}
+
+.Info {
+	width: 25%;
+	margin: auto;
+	border: 2px solid black;
+	padding: 10px;
+	font-family: 'Piazzolla', serif;
+	background: #ECE5FF;
+}
+
+.InfoTitle {
+	font-family: 'Bree', serif;
+	text-decoration: underline;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.iframe {
+	margin-top: 10px;
+	/*margin-bottom: 5px;*/
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.paragraph {
+	margin-left: 30px;
+}
+
+@media (max-width: 1000px) {
+	.navbar {
+		flex-direction: column;
+	}
+}
+
+/*------------------------TABLE---------------------------*/
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 25%
+}
+
+table.center {
+	margin-left: 40%;
+	margin-top: -125px;
+}
+
+td, th {
+	border: 1px solid #260033;
+	text-align: left;
+	padding: 8px;
+}
+
+.center tr:nth-child(even) td{
+	background-color: #F7E9FC;
+}
+
+/*------------------------FOOTER---------------------------*/
+footer {
+	text-align: center;
+	padding: 5px;
+	background-color: #E9F4FB;
+	background-image: url('images/Footer.gif');
+	margin-top: 10px;
+}
+
+.footer {
+	font-family: 'David Libre', serif;
+	font-size: 20px;
+}
+
+.footer a {
+	font-size: 15px;
+}
+
+.class_info {
+	font-family: 'Times New Roman', serif;
+	font-size: 15px;
+	color: #485157;
+}
+
+#main {
+	margin-top: 0;
+}
+
+/*---------------------ABOUT ME----------------------------*/
+#AboutMe {
+	width: 55%;
+	/*margin: auto;*/
+	border: 2px solid black;
+	padding: 20px;
+	font-family: 'Piazzolla', serif;
+	background: #ECE5FF;
+	overflow: hidden;
+	/*clear: left;*/
+}
+
+#name {
+	text-decoration: underline;
+	text-decoration-style: wavy;
+	margin-top: 20px;
+	margin-left: 30px;
+}
+
+#profile {
+	float: left;
+	margin-top: 15px;
+	margin-left: 35px;
+}
+
+#margin{
+	margin: auto;
+}
+
+.front_page {
+	position: relative;
+}
+
+.front_page:before {
+	content: '';
+	display: block;		
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.3;
+	background: url('images/Cloud.gif');
+	background-size: cover;
+	z-index: -1;
+}
+
+/*------------------------GROUPS--------------------------*/
+#Got7 {
+	color: #007A6A;
+}
+
+#BTS {
+	color: #551A8B;
+}
+
+#Blackpink {
+	color: #FF59C7;
+}
+
+#RedVelvet {
+	color: #C21E56;
+}
+
+#Seventeen {
+	color: #92A8D1;
+}
+
+#Info {
+	width: 25%;
+	margin-left: 30px;
+	border: 2px solid black;
+	padding: 10px;
+	font-family: 'Piazzolla', serif;
+	background: #ECE5FF;
+}
+
+/*---------------------------SOLO--------------------------*/
+#Ailee {
+	color: #CC33FF;
+}
+
+#IU {
+	color: #39FF14;
+}
+
+#Hwang {
+	color: #1575AD;
+}
+
+#Zico {
+	color: #1A000D;
+}
